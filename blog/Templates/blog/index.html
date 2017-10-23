@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static "css/style_login.css" %}"></link>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+</head>
+<body>
+  <div class="container">
+    <img src="{% static 'img/logo.png' %}">
+    <form action="posts" method="POST"> {% csrf_token %}
+      <div class = "form-input">
+        <input id="user" type="text" name="usuario" placeholder="Entre com o seu usuário" value= "{{ usuario }}">
+        <input id="pass" type="password" name="senha" placeholder="Entre com a sua senha" value= "{{ senha }}">
+        <input type="submit" name="enter" value = "OK" class="btn-login">
+      </div>
+      </form>
+      <br>
+      <a href="cadastro">Cadastrar novo usuário</a>
+      <br>
+      <a href="index.html">Retornar à pagina principal</a>
+    
+  </div>
+</body>
+</html>

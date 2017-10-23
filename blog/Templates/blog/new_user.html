@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style_new_user.css' %}"></link>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.css' %}">
+</head>
+<body>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<div class="icon-bar">
+		<a class="active" href="/blog"><i class="fa fa-home"></i></a> 
+		<!--<a href="/blog"><i class="fa fa-search"></i></a>--> 
+		<a href="cadAnimais"><i class="fa fa-plus"></i></a> 
+		<a href="sobre"><i class="fa fa-info"></i></a>
+		<a href="login"><i class="fa fa-user"></i></a> 
+	</div>
+  <div class="container">
+    <img src="{% static 'img/reg.png' %}" style='height: 60%; width: 60%; object-fit: contain'>
+    <form>
+      <div class = "form-input">
+        <input type="text" name="usuario" placeholder="Usuário">
+        <input type="password" name="email" placeholder="E-mail">
+        <input type="password" name="senha" placeholder="Senha">
+        <input type="password" name="senha_confirm" placeholder="Confirme sua senha">
+      </div>
+      <input type="submit" name="enter" value = "Confirmar" class="btn-submit">
+    </form>
+  </div>
+</body>
+</html>

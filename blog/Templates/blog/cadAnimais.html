@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Novo Animal</title>
+	<meta charset="utf-8">
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/post_style.css' %}">
+</head>
+<body>
+	<ul>
+		<li><a href="/blog">Fauna Watching</a></li>
+		<!--<li><a href="/blog">Consulta</a></li>-->
+		<li><a href="cadAnimais">Cadastro de Animais</a></li>
+		<!--<li><a href="cadBiomas">Cadastro de Biomas</a></li>-->
+		<li><a href="sobre">Sobre</a></li>
+		<!--<li><a href="/blog">Perfil</a></li>-->
+		<li><a href="login">Usuario</a></li>
+	</ul>
+	<h1>Cadastrar animal</h1>
+	<form method='POST' class='post-form' enctype='multipart/form-data'> {% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" class="save btn">Postar</button>
+	</form>
+	<form action="posts">
+		<button type="submit" class="cancel" name="cancel" >Cancelar</button>
+	</form>
+</body>
+</html>

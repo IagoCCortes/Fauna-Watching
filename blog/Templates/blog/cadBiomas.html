@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nova Postagem</title>
+	<meta charset="utf-8">
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/post_style.css' %}">
+</head>
+<body>
+	<h1>Nova Sugestao</h1>
+	<form method='POST' class='post-form'> {% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" class="save btn">Postar</button>
+	</form>
+	<form action="posts">
+		<button type="submit" class="cancel" name="cancel" >Cancelar</button>
+	</form>
+</body>
+</html>
